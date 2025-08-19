@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('{{ url_for('static', filename='background.png') }}');
+            background-image: url('{{ url_for("static", filename="background.png") }}');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -29,12 +29,22 @@
         p {
             font-size: 1.2rem;
         }
+        .quote {
+            margin-top: 20px;
+            font-style: italic;
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="overlay">
         <h1>Welcome to the Vada Pav Flask App! 😋</h1>
         <p>The most delicious way to practice Flask 🚀</p>
+        <div class="quote">
+            <p><b>Special:</b> {{ quote }}</p>
+        </div>
     </div>
 </body>
 </html>
